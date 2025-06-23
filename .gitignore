@@ -1,0 +1,49 @@
+# macOS 系统特有的文件
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Qt Creator 用户配置文件
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.autosave
+
+# Qt Creator build 目录（常见默认名）
+build-*/
+
+# 如果你自定义了构建路径，也建议忽略
+/build/
+/build-*/        # 例如 build-Debug, build-Release
+/bin/
+/debug/
+/release/
+
+# 编译输出文件
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.lib
+*.exe
+*.app
+*.dSYM/
+
+# CMake 临时生成文件（如果用的是 CMake）
+CMakeLists.txt.user
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# 临时文件
+*.log
+*.tmp
+
+# Qt 生成的 moc/uic/rcc 文件（可以添加也可不添加，看是否写入源码）
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
