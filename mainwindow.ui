@@ -14,128 +14,76 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="lineEditTask">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>100</y>
+      <width>113</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>90</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>First Number:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>130</y>
+      <x>120</x>
+      <y>100</y>
       <width>101</width>
-      <height>21</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Second Number:</string>
+     <string>Object Name:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtFirstNum">
+   <widget class="QListWidget" name="listWidgetTasks">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>90</y>
-      <width>113</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtSecondNum">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>130</y>
-      <width>113</width>
-      <height>21</height>
+      <x>120</x>
+      <y>210</y>
+      <width>256</width>
+      <height>192</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="btnAdd">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>210</y>
-      <width>21</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>+</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnSubtract">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>210</y>
-      <width>31</width>
+      <x>130</x>
+      <y>150</y>
+      <width>51</width>
       <height>32</height>
      </rect>
     </property>
     <property name="text">
-     <string>-</string>
+     <string>Add</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnMultiply">
+   <widget class="QPushButton" name="btnDelete">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>210</y>
-      <width>31</width>
+      <x>200</x>
+      <y>150</y>
+      <width>51</width>
       <height>32</height>
      </rect>
     </property>
     <property name="text">
-     <string>*</string>
+     <string>Delete</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnDivide">
+   <widget class="QPushButton" name="btnMarkDone">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>210</y>
-      <width>31</width>
+      <x>270</x>
+      <y>150</y>
+      <width>81</width>
       <height>32</height>
      </rect>
     </property>
     <property name="text">
-     <string>/</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtResult">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>290</y>
-      <width>113</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>290</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>The result is:</string>
+     <string>Mark Done</string>
     </property>
    </widget>
   </widget>

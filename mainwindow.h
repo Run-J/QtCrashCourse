@@ -18,13 +18,12 @@ public:
     ~MainWindow();
 
 private slots:
+
     void on_btnAdd_clicked();
 
-    void on_btnSubtract_clicked();
+    void on_btnDelete_clicked();
 
-    void on_btnMultiply_clicked();
-
-    void on_btnDivide_clicked();
+    void on_btnMarkDone_clicked();
 
 private:
     Ui::MainWindow *ui;

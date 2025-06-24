@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,40 +14,37 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-int firstNum, secondNum, result;
+
+
 
 void MainWindow::on_btnAdd_clicked()
 {
-    firstNum = ui->txtFirstNum->text().toInt();
-    secondNum = ui->txtSecondNum->text().toInt();
-    result = firstNum + secondNum;
-    ui->txtResult->setText(QString::number(result));
+    QString task = ui->lineEditTask->text().trimmed();
+    if (task.isEmpty()) {
+        QMessageBox::warning(this, "Warning", "Task cannot be empty");
+        return;
+    }
+
+    ui->listWidgetTasks->addItem(task);
+    ui->lineEditTask->clear();
 }
 
 
-void MainWindow::on_btnSubtract_clicked()
+void MainWindow::on_btnDelete_clicked()
 {
-    firstNum = ui->txtFirstNum->text().toInt();
-    secondNum = ui->txtSecondNum->text().toInt();
-    result = firstNum - secondNum;
-    ui->txtResult->setText(QString::number(result));
+    QListWidgetItem *item = ui->listWidgetTasks->currentItem();
+    if (!item) return;
+
+    delete item;
 }
 
 
-void MainWindow::on_btnMultiply_clicked()
+void MainWindow::on_btnMarkDone_clicked()
 {
-    firstNum = ui->txtFirstNum->text().toInt();
-    secondNum = ui->txtSecondNum->text().toInt();
-    result = firstNum * secondNum;
-    ui->txtResult->setText(QString::number(result));
-}
+    QListWidgetItem * item = ui->listWidgetTasks->currentItem();
+    if (!item) return;
 
-
-void MainWindow::on_btnDivide_clicked()
-{
-    firstNum = ui->txtFirstNum->text().toInt();
-    secondNum = ui->txtSecondNum->text().toInt();
-    result = firstNum / secondNum;
-    ui->txtResult->setText(QString::number(result));
+    item->setText("[Done]" + item->text());
+    item->setForeground(Qt::gray);
 }
 
